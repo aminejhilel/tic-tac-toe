@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>TIC TAC TOE</h1>
+            <p class="subtitle">Player vs Player</p>
+        </div>
 
-    <h1 id="title">TIC TAC TOE GAME</h1>
-    <div class="game">
-        <div id="item1" onclick="game('item1')"></div>
-        <div id="item2" onclick="game('item2')"></div>
-        <div id="item3" onclick="game('item3')"></div>
-    
-        <div id="item4" onclick="game('item4')"></div>
-        <div id="item5" onclick="game('item5')"></div>
-        <div id="item6" onclick="game('item6')"></div>
-    
-        <div id="item7" onclick="game('item7')"></div>
-        <div id="item8" onclick="game('item8')"></div>
-        <div id="item9" onclick="game('item9')"></div>
+        <div class="game-info">
+            <div class="player-card player-x">
+                <span class="player-label">Player X</span>
+                <span class="player-score" id="scoreX">0</span>
+            </div>
+            <div class="status-card">
+                <p id="title">Player X Turn</p>
+                <p class="move-counter">Move: <span id="moveCount">0</span>/9</p>
+            </div>
+            <div class="player-card player-o">
+                <span class="player-label">Player O</span>
+                <span class="player-score" id="scoreO">0</span>
+            </div>
+        </div>
+
+        <div class="game">
+            <div id="item1" class="cell" onclick="game('item1')"></div>
+            <div id="item2" class="cell" onclick="game('item2')"></div>
+            <div id="item3" class="cell" onclick="game('item3')"></div>
+
+            <div id="item4" class="cell" onclick="game('item4')"></div>
+            <div id="item5" class="cell" onclick="game('item5')"></div>
+            <div id="item6" class="cell" onclick="game('item6')"></div>
+
+            <div id="item7" class="cell" onclick="game('item7')"></div>
+            <div id="item8" class="cell" onclick="game('item8')"></div>
+            <div id="item9" class="cell" onclick="game('item9')"></div>
+        </div>
+
+        <div class="button-group">
+            <button id="resetBtn" onclick="resetGame()" class="btn btn-reset">New Game</button>
+            <button id="resetScoreBtn" onclick="resetScore()" class="btn btn-reset-score">Reset Score</button>
+        </div>
     </div>
-    
-
 
     <script src="main.js"></script>
 </body>
+
 </html>
